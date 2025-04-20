@@ -17,12 +17,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    # Set up JDK 17
+    # Set up JDK 17 (using Adoptium's temurin distribution)
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
         java-version: '17'
-        distribution: 'adoptopenjdk'
+        distribution: 'temurin'  # Change this to 'temurin'
 
     # Build the project using Maven
     - name: Build with Maven
